@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Box</title>
+  <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      .msg { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      .msg input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      .msg button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      .name-field {float: right;}
+      .user-name {float: right;}
+      .hidden { visibility: hidden; }
+    </style>
+</head>
+<body>
+  <form action="" class="name-field">
+    <input id="name" autocomplete="off" /><button class="n">Enter name</button>
+  </form>
+  <h2 class="user-name hidden"></h2>
+  <h1>Welcome to ChatBox</h1>
+  <ul id="messages"></ul>
+  <form action="" class="msg">
+    <input id="m" autocomplete="off" /><button>Send</button>
+  </form>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
